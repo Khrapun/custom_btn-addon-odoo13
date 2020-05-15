@@ -1,0 +1,93 @@
+
+.oe_kanban_project_avatars img {
+    width: 30px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.oe_form_gantt_avatars:after {
+  font-family: "mnmliconsRegular" !important;
+  font-size: 21px;
+  font-weight: 300 !important;
+  content: "y";
+  top: 3px;
+  position: relative;
+}
+
+.openerp .oe_kanban_view .oe_kanban_project {
+  width: 250px;
+  min-height: 160px !important;
+  cursor: default;
+}
+
+.openerp .oe_percent strong:after {
+  content: "%";
+}
+
+.openerp .oe_margin_top_8 {
+  margin-top: 8px;
+}
+.openerp .oe_kanban_project .oe_kanban_project_list .col-lg-6 a{
+  margin-left: 5px;
+}
+
+/* Kanban status as label in project stage form view */
+.openerp label.oe_project_kanban_legend {
+  min-width: inherit !important;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.o_form_project_tasks.o_form_editable .oe_title {
+  max-width: initial;
+}
+
+.o_form_project_tasks.o_form_editable .oe_title .o_task_name {
+  /*
+   * should be (coming from addons/web/static/src/scss/form_view.scss):
+   * max-width: map-get($container-max-widths, md) - (2 * $o-horizontal-padding);
+   */
+  max-width: 688px;
+  margin-right: auto;
+}
+
+
+#dropcontent {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  background: white;
+  border: solid #dfdfdf 1px;
+  width: 119px;
+  margin-top: 5px;
+}
+
+#dropcontent button {
+  display: flex;
+  width: 100%;
+  margin: 5px 0px;
+  color: #1f1f1f;
+  background-color: #ffffff;
+  border: none;
+}
+
+#dropcontent button:hover {
+  background-color: #e6e5e5;
+}
+
+.btn-dropddown-crt::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.active {
+  
+}
