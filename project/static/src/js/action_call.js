@@ -13,7 +13,7 @@ odoo.define('School.action_button', function (require) {
                 let isClick = false;
                 let self = this
                 let btnsDiv =  this.$buttons;
-                let model = this.modelName;
+                let modelName = this.modelName;
                 let menuBtnTempl = $(`<button id="show-btn" class="btn btn-primary btn-dropddown-crt"><span>Create</span></button>`);
                 if (this.$buttons) {
                     let createBtn = this.$buttons.find('.o_list_button_add');
@@ -21,9 +21,9 @@ odoo.define('School.action_button', function (require) {
                     btnsDiv.prepend(menuBtnTempl);
                 }
 
-                function getDropDown(model) {
+                function getDropDown(modelName) {
                     return rpc.query({
-                        model: model,
+                        model: modelName,
                         method: 'return_fields',
                         context: {'create_button_dropdown_field': defField}
                     }).then(function (data) {
@@ -52,7 +52,7 @@ odoo.define('School.action_button', function (require) {
                         context['default_'+defField] = defValue;
                         self.do_action({
                             type: 'ir.actions.act_window',
-                            res_model: model,
+                            res_model: modelName,
                             view_mode: 'form',
                             view_type: 'form',
                             views: [[false, 'form',]],
@@ -80,7 +80,7 @@ odoo.define('School.action_button', function (require) {
                     });
                 };
 
-                getDropDown(model);
+                getDropDown(modelName);
 
                 customizeClickCreate();
         }
