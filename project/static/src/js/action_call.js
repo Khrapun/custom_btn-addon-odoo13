@@ -9,7 +9,6 @@ odoo.define('School.action_button', function (require) {
 
        renderButtons: function($node) {  
             this._super.apply(this, arguments);
-            console.log(this.model.get(this.handle, {raw: true}).getContext().create_button_dropdown_field)
                 let defField = this.model.get(this.handle, {raw: true}).getContext().create_button_dropdown_field;
                 let isClick = false;
                 let self = this
